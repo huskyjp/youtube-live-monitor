@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Golang Websocket</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Youtube Live Monitor</h2>
+      <h1 id="subscribers"></h1>
+      <h1 id="views"></h1>
+      <h1 id="videos"></h1>
+    </div>
+
+    <script>
+      let data = {};
+      let url = "ws";
+      var websocket = new WebSocket("ws://localhost:8080/" + url);
+
+      websocket.onopen = function(event) {
+        console.log("Now connected websocket successfully!");
+        websocket.onmessage("Howdy?... From the Client!")
+      };
+
+      websocket.onerror = function(error) {
+        console.log("Error connecting to websocket server");
+        console.log(error);
+      };
+
+      websocket.onmessage = function(event) {
+        console.log("Socket Closed Connection:", event)
+        data = JSON.parse(event.data);
+        document.getElementById("subscribers").innerText =
+          data.statistics.subscriberCount;
+        document.getElementById("views").innerText = 
+          data.statistics.viewCount;
+        document.getElementById("videos").innerText = 
+          data.statistics.videoCount;
+      };
+    </script>
+  </body>
+</html>
