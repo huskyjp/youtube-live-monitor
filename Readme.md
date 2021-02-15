@@ -14,8 +14,8 @@ export CHANNEL_ID='CHANNEL_ID'
 export YOUTUBE_KEY='API_KEY'
 ```
 which enables you to get a personal YouTube data.
-'CHANNEL_ID' => You can get it from [here](https://www.youtube.com/account_advanced)
-'API_KEY`    => You can get it from [here](https://developers.google.com/youtube/v3/getting-started)
+- 'CHANNEL_ID' => You can get it from [here](https://www.youtube.com/account_advanced)
+- 'API_KEY`    => You can get it from [here](https://developers.google.com/youtube/v3/getting-started)
 
 ```
 go get ["github.com/gorilla/websocket"](https://github.com/gorilla/websocket)
