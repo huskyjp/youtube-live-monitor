@@ -1,0 +1,18 @@
+body {
+  background-color: darkslategrey;
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats {
+  margin-top: 0;
+  padding: 0;
+  line-height: 0;
+  color: whitesmoke;
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+h1 {
+  color: whitesmoke;
+}

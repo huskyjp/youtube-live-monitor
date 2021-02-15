@@ -9,6 +9,7 @@ import (
 	"os"
 )
 
+// GetYoutubeData requests YouTube API to get basic information depends users' YoutubeKey & ChannelID
 func GetYoutubeData() (Items, error) {
 	var response Response
 	// Construct a new request with GET method to the youtube api
