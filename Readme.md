@@ -18,8 +18,8 @@ which enables you to get a personal YouTube data.
 - 'API_KEY`    => You can get it from [here](https://developers.google.com/youtube/v3/getting-started)
 
 ```
-go get ["github.com/gorilla/websocket"](https://github.com/gorilla/websocket)
+go get github.com/gorilla/websocket
 go run main.go
 ```
 which will kick of a server on http://localhost:8080 and display your personal YouTube Live Data every 3 seconds!
-You need to import Gorilla Web Toolkit package.
+You need to import Gorilla Web Toolkit package. More details [here](https://github.com/gorilla/websocket)
